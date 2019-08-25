@@ -69,7 +69,6 @@ C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\System.Web.WebPa
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\Newtonsoft.Json.xml
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\Antlr3.Runtime.pdb
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.csprojAssemblyReference.cache
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.csproj.CoreCompileInputs.cache
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.csproj.CopyComplete
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.dll
