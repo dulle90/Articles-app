@@ -73,3 +73,8 @@ C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesAp
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.csproj.CopyComplete
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.dll
 C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.pdb
+C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\obj\Debug\ArticlesApp.csprojAssemblyReference.cache
+C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\EntityFramework.dll
+C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\EntityFramework.SqlServer.dll
+C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\EntityFramework.xml
+C:\Users\IGNJAT\Desktop\ArticlesApp\ArticlesApp\ArticlesApp\bin\EntityFramework.SqlServer.xml

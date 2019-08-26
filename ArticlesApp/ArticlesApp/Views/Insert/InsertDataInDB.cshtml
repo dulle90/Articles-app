@@ -1,0 +1,33 @@
+﻿@model ArticlesApp.Models.tblArticle
+@using (Html.BeginForm())
+{
+<div class="container">
+    <div class="form-group">
+        <label>Name:</label>
+        <input class="form-control" name="Name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+        <label>Description:</label>
+        <input class="form-control" name="Description" placeholder="Enter Description">
+    </div>
+    <div class="form-group">
+        <label>Categories:</label>
+        <input class="form-control" name="Categories" placeholder="Enter Categories">
+    </div>
+    <div class="form-group">
+        <label>Manufacturer:</label>
+        <input class="form-control" name="Manufacturer" placeholder="Enter Manufacturer">
+    </div>
+    <div class="form-group">
+        <label>Supplier:</label>
+        <input class="form-control" name="Supplier" placeholder="Enter Supplier">
+    </div>
+    <div class="form-group">
+        <label>Price:</label>
+        <input class="form-control" name="Price" placeholder="Enter Price">
+    </div>
+    <div class="button">
+        <button>Submit</button>
+    </div>
+</div>
+}
