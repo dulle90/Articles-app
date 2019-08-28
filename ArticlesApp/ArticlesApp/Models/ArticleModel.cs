@@ -7,6 +7,7 @@ namespace ArticlesApp.Models
 {
     public class ArticleModel
     {
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -15,4 +16,7 @@ namespace ArticlesApp.Models
         public string Supplier { get; set; }
         public decimal Price { get; set; }
     }
+    
+    
+
 }

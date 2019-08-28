@@ -15,46 +15,72 @@ namespace ArticlesApp.Controllers
         // GET: ShowItems
         public ActionResult Index()
         {
+            List<ArticleModel> item = new List<ArticleModel>();
+            ReadWriteJson view = new ReadWriteJson();
 
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            string jsonSrc = path + @"\App_Data\source.json";
-            string jsonText;
+            string mainPath = AppDomain.CurrentDomain.BaseDirectory;
+            string path = mainPath + @"\App_Data\source.json";
 
-            using (StreamReader strRead = new StreamReader(jsonSrc))
-            {
-                jsonText = strRead.ReadToEnd();
-            }
-            return View(jsonText);          
-        }
-
-        public ActionResult Create(ArticleModel itemModel)
-        {
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            string jsonSrc = path + @"\App_Data\source.json";
-            string jsonText = System.IO.File.ReadAllText(jsonSrc);
-            var sr = JsonConvert.DeserializeObject<List<ArticleModel>>(jsonText);
-            List<ArticleModel> items = new List<ArticleModel>();
-
-            items = JsonConvert.DeserializeObject<List<ArticleModel>>(jsonText);
-
-            ArticleModel model = items.FirstOrDefault(x => x.Id == itemModel.Id);
-
-            if (model == null)
-            {
-                items.Add(itemModel);
-            }
-            else
-            {
-                int index = items.FindIndex(x => x.Id == itemModel.Id);
-                items[index] = itemModel;
-            }
-
-            string jSONString = JsonConvert.SerializeObject(items);
-            System.IO.File.WriteAllText(jsonSrc, JsonConvert.SerializeObject(jSONString));
-
-            return View(items);
+            item = JsonConvert.DeserializeObject<List<ArticleModel>>(view.Read(path));
             
-        }     
+            return View(item);          
+        }
+        [HttpPost]
+        public ActionResult Create(ArticleModel articleModel)
+        {
+            try
+            {
+                List<ArticleModel> item = new List<ArticleModel>();
+                ReadWriteJson readInsert = new ReadWriteJson();
+
+                string mainPath = AppDomain.CurrentDomain.BaseDirectory;
+                string path = mainPath + @"\App_Data\source.json";
+                item = JsonConvert.DeserializeObject<List<ArticleModel>>(readInsert.Read(path));
+
+
+                ArticleModel article = item.FirstOrDefault(x => x.Id == articleModel.Id);
+
+                if (article == null)
+                {
+                    item.Add(articleModel);
+                }
+                else
+                {
+                    int index = item.FindIndex(x => x.Id == articleModel.Id);
+                    item[index] = articleModel;
+                }
+
+                string result = JsonConvert.SerializeObject(item);
+                readInsert.Insert(path, result);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
+    public class ReadWriteJson
+    {
+        public ReadWriteJson() { }
+
+        public string Read(string path)
+        {
+            string result;
+            using (StreamReader strRead = new StreamReader(path))
+            {
+                result = strRead.ReadToEnd();
+            }
+            return result;
+        }
+        public void Insert(string path, string jSonString)
+        {
+            using (var strInsert = File.CreateText(path))
+            {
+                strInsert.Write(jSonString);
+            }
+        }
 
     }
 }
