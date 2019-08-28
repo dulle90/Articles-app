@@ -16,7 +16,7 @@ namespace ArticlesApp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Insert", action = "InsertDataInDB", id = UrlParameter.Optional }
+                defaults: new { controller = "ShowItems", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
