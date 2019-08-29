@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ReadWriteController.cs" />
-    <Compile Include="Controllers\RemoveController.cs" />
     <Compile Include="Controllers\ShowItemsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,7 +172,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\ShowItems\Index.cshtml" />
     <Content Include="Views\ReadWrite\Create.cshtml" />
-    <Content Include="Views\Remove\Index.cshtml" />
+    <Content Include="Views\ReadWrite\Delete.cshtml" />
+    <Content Include="Views\ReadWrite\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

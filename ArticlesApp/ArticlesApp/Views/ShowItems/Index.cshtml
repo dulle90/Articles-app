@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ArticlesApp.Models.ArticleModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Show Items";
 }
 
 <h2>Index</h2>
@@ -59,8 +59,8 @@
             @Html.DisplayFor(modelItem => item.Price) &euro;
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Remove","Remove", new { id = item.Id })
+            @Html.ActionLink("Edit", "Edit", "ReadWrite", new { id = item.Id }, null)|           
+            @Html.ActionLink("Delete", "Delete", "ReadWrite", new { id = item.Id }, null)
         </td>
     </tr>
 }
